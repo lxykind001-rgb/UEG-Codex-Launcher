@@ -1,0 +1,13 @@
+.cache/
+node_modules/
+dist/
+**/bin/
+**/obj/
+backups/
+marketplace/plugins/ueg-startup/.mcp.json
+marketplace/plugins/ueg-startup/installation.json
+src/UEGCodexLauncher/wwwroot/ueg.runtime.html
+src/UEGCodexLauncher/wwwroot/ueg.en.html
+src/UEGCodexLauncher/wwwroot/ueg-lockup-en.svg
+src/UEGCodexLauncher/wwwroot/voice/
+*.user
