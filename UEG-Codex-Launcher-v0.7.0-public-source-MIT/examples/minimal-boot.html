@@ -1,0 +1,20 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Minimal boot</title>
+<body><p id="card"></p><button id="continue" disabled>Continue</button>
+<script>
+let session = null, ended = false;
+const send = (type, extra = {}) => chrome.webview.postMessage({ type, protocolVersion: 1, sessionId: session.sessionId, ...extra });
+chrome.webview.addEventListener('message', ({ data }) => {
+  if (session || data.type !== 'boot:init' || data.protocolVersion !== 1 || !data.sessionId) return;
+  session = data;
+  document.querySelector('#card').textContent = data.card?.displayName || '';
+  document.querySelector('#continue').disabled = false;
+  requestAnimationFrame(() => requestAnimationFrame(() => send('boot:ready')));
+});
+function finish(reason) {
+  if (!session || ended) return;
+  ended = true;
+  if (session.mode === 'launch') send('boot:done', { reason });
+}
+document.querySelector('#continue').onclick = () => finish('complete');
+document.onkeydown = event => { if (event.key === 'Escape') finish('skip'); };
+</script></body></html>

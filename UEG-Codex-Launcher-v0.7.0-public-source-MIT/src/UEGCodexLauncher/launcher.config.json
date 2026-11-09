@@ -1,0 +1,19 @@
+{
+  "ueg": {
+    "autoplay": false,
+    "voice": "off",
+    "qrPayload": ""
+  },
+  "codex": {
+    "mode": "previewOnly",
+    "target": "",
+    "windowProcessNames": [],
+    "windowTitleContains": "",
+    "readyTimeoutSeconds": 75
+  },
+  "window": {
+    "width": 1280,
+    "height": 720,
+    "keepOnTopDuringBoot": true
+  }
+}
