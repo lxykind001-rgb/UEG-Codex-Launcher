@@ -1,0 +1,20 @@
+{
+  "name": "ueg-local",
+  "interface": {
+    "displayName": "UEG Local"
+  },
+  "plugins": [
+    {
+      "name": "ueg-startup",
+      "source": {
+        "source": "local",
+        "path": "./plugins/ueg-startup"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_USE"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
