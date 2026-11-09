@@ -1,0 +1,19 @@
+{
+  "name": "ueg-startup",
+  "version": "0.7.0",
+  "description": "在 GPT App 内调整 UEG 启动画面、字幕和各账号的角色身份卡。",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "UEG 启动设置",
+    "shortDescription": "启动覆盖方式、字幕语言与账号角色卡",
+    "longDescription": "在插件详情的设置中点击“打开 UEG 设置”，调整画面、字幕、动画扫描、按邮箱保存的身份卡、下次启动选择、草稿预览和单卡重置。无需发送聊天消息。需要本机已安装 UEG 启动器。",
+    "developerName": "Local UEG launcher",
+    "category": "Productivity",
+    "capabilities": [
+      "Plugin settings",
+      "Local settings UI"
+    ],
+    "brandColor": "#213a4c"
+  }
+}
